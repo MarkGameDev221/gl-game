@@ -1,1 +1,5 @@
-
+[[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 404
+  force = false
