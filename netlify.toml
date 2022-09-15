@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/old-path"
-  to = "/new-path"
+  from = "/"
+  to = "/main.html"
   status = 404
   force = false
