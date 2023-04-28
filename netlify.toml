@@ -3,6 +3,3 @@
   to = "/main.html"
   status = 404
   force = false
-[[redirects]]
-  from = "https://glgame.com"
-  to = "https://gologame.netlify.app/main.html
