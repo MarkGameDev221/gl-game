@@ -10,12 +10,12 @@
     <scipt scr="https://code.jquery.com/jquery-3.7.0.js"></scipt>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script>
-      names = ["Іван", "Роман", "Ігор", "Максим", "Віталій", "Микола", "Степан", "Андрій", "Марко", "Віктор", "Назар"]
-      coins = 0
-      name = names[Math.floor(Math.random() * names.length)]
-      coins = Math.floor(Math.random() * 100)
-      $("name").innerHTML("<span id='name'>" + name + "</span>")
-      $("coins").innerHTML("<span id='coins'>" + coins + "</span>")
+      names = ["Іван", "Роман", "Ігор", "Максим", "Віталій", "Микола", "Степан", "Андрій", "Марко", "Віктор", "Назар"];
+      coins = 0;
+      name = names[Math.floor(Math.random() * names.length)];
+      coins = Math.floor(Math.random() * 100);
+      $("name").text(name);
+      $("coins").text(coins);
     </script>
     <h1>ОНОВЛЕННЯ 0.9 - магазин в режимі на трьох, щоденні подарунки, новий звук та ще багато інших виправлень!</h1>
     <br>
