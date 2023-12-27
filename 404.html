@@ -12,9 +12,11 @@
       function holyMoly() {
         let holySound = new Audio("holy-moly.mp3");
         holySound.play()
+        let image = document.getElementbyId("holyImage")
+        holyImage.setAttribute("src", "https://media.tenor.com/IQcYOoTEuXYAAAAM/holy-moly.gif")
       };
     </script>
-    <img src="posters/404_gl.png" onclick="holyMoly()">
+    <img src="posters/404_gl.png" id="holyImage" onclick="holyMoly()">
     <h1>Сторінку не знайдено! (Помилка 404)</h1>
     <p>Скоріше, або вона не створена, або видалена.</p>
     <button class="btn btn-success"><a style="text-decoration: none; color: white;" href="/main.html">Перейти на головну</a></button>
