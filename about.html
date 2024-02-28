@@ -15,13 +15,17 @@
     <style>
       .writing {
         overflow: hidden;
-      color: white;
       font-size: 40px;
-      font-family: monospace;
       white-space: nowrap;
       border-right: 4px solid orange;
       animation: printed-text 4.5s steps(19),
         flashin-border .75s step-start infinite;
+      }
+      .onesymbol {
+        width: 1ch;
+      }
+      .fivesymbols {
+        width: 5ch;
       }
       @keyframes flashin-border {
         0% {
@@ -48,9 +52,9 @@
           <th>Гравців</th>
         </tr>
         <tr>
-          <td class="writing">3</td>
-          <td class="writing">1</td>
-          <td class="writing">> 1500</td>
+          <td><span class="writing onesymbol">3</span></td>
+          <td><span class="writing onesymbol">1</span></td>
+          <td><span class="writing fivesymbols">> 1500</span></td>
         </tr>
       </table>
   </body>
