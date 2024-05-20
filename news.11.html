@@ -27,7 +27,15 @@
         console.log("Babe, wake up, 1.1 just dropped!")
         console.log("Nooooooooooo!")
       }
+      var loader = document.getElementById("loading");
+      var content = document.getElementById("content");
+      window.addEventListener("load", (event) => {
+        loading.style.display = "none"
+        content.style.display = "block";
+      });
     </script>
+    <div class="spinner-border text-warning" style="display: block" role="status" id="loading"><span class="visually-hidden">Loading...</span></div>
+    <div class="content" style="display: none;" id="content">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="main">Головна</a></li>
@@ -147,7 +155,9 @@
     <p>🔘 Текст Подарунку в магазині повернувся!</p>
     <p>🔘 Підказка магазину бустів тепер відображається правильно у туторіалі</p>
     <p>🔘 Видалено визначення у завданні голяком, де це обов'язково має бути 30 секунд</p>
+    <p>🔘 Режим ШАР тепер реагує на закриття ігри</p>
     <h3>КОСМЕТИЧНІ ЗМІНИ</h3>
     <p>🖼 Додана літня тема (новий фон, логотип) та дві нові іконки - одна унікальна та друга неунікальна</p>
+    </div>
   </body>
 </html>
