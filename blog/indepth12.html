@@ -12,22 +12,72 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <h1>InDepth - 1.2</h1>
     <p>Це вже другий пост на нашу нову тему InDepth, де ми розказуємо деталі оновлень, щоб показати, наскільки вони є великими!</p>
-    <h2>Події</h2>
+  
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <!-- Зміст -->
+      <h2>Зміст</h2>
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <a style="color: black; text-decoration: none;" href="#1">Події</a> 
+        </button>
+      </h3>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Опис того, як працюють події
+          <p><a href="#1-1">Сторінка подій</a></p>
+          <p><a href="#1-2">Завдання</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          <a style="color: black; text-decoration: none;" href="#2">Тимчасові валюти</a>
+        </button>
+      </h3>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Опис того, як працюють Пропозиції 2.0!
+          <ul>
+            <p><a href="#2 (ps)">Необхідність в оновленні системи</a></p>
+            <p><a href="#2-1">Як це все відображається?</a></p>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h2 id="1">Події</h2>
     <p>Події це ледь не найбільша і найопрацьованіша функція, яку ми коли небудь додавали. І ось що входило до "подій"</p>
     <ul>
       <li>ціла нова <b>сторінка подій</b>, у якій можна побачити прогрес у подіях і забрати нагороди</li>
       <p>завдання, які відслідковуються у режимі на двох, на трьох, в мультплеєрі і магазині!</p>
     </ul>
     <p><b>Самі події є списком, що складається із назви події, вмісту, чи вона тестова і час завершення події.</b></p>
-    <h3>Сторінка подій</h3>
+    <h3 id="1-1">Сторінка подій</h3>
     <p>Сторінка подій складається із даних користувача (ім'я, монети та бусти), які витягуються із файлів гри, списку нагород і списку подій.</p>
     <ul class="list-group">
       <li class="list-group-item">Список подій генерується за допомогою легендарного CompCreator <img src="https://media1.tenor.com/m/epNMHGvRyHcAAAAd/gigachad-chad.gif"
-      title="Герой не той, хто в сяючих обладунках..."> по схожій схемі, як і <a href="https://gologame.netlify.app/blog/indepth11.html#2%20(ps2)">пропозиції 2.0</a>.</li>
+      width="25px" height="30px" title="Герой не той, хто в сяючих обладунках..."> по схожій схемі, як і <a href="https://gologame.netlify.app/blog/indepth11.html#2%20(ps2)">пропозиції 2.0</a>.</li>
       <li class="list-group-item">Список нагород генерується також за допомогою CompCreator, використовуючи список неотриманих нагород. Цей список створюється ще при
       генерації подій, де система провіряє нагороди, і якщо ця нагорода не була отримана, то вона додається до списку.</li>
     </ul>
-    <h3>Завдання</h3>
+    <h3 id="1-2">Завдання</h3>
     <p>У режимі на двох, на трьох, у мультиплеєрі та в магазині є спеціальні відслідковувачі виконання завдань, які необхідно виконувати, щоб прогресувати у подіях.</p>
     <p>Прогрес у завданнях відслідковується завдяки уже словникам. Теги там є назвами подій і вмістом є список, у якому кожен елемент відповідає за відповідне завдання.</p>
     <p><u>Напр.:</u> <code>"Подія": [0,0,2]</code>, у якому в 2 перших завданнях немає прогресу, а в останньому завдання було виконано на 2.</p>
+    
+    <h2 id="2">Тимчасові валюти</h2>
+    <p>Тимчасові валюти є другою найважливішою нашою функцією, що ми додали у цьому оновленні. Спершу ця функція потребувала повної переробки системи змінних у режимі на двох.</p>
+    <div class="alert alert-info" role="alert" id="2 (ps)">
+      До цього оновлення система базувалась на звичайних змінних. Напр. змінними монет були "coins" i "coins2". У новій системі змінна монет одна, і утворена
+      зі списку: [0,0]. Якщо раніше при встановленні монет встановлювалась кожна змінна окремо, то тепер при встановленні значення просто додається в кінець списку.
+    </div>
+    <p>Потім було вирішено додати її у цикл нагород при виконанні завдань. <b>І як це працює?</b> Все дуже просто - при оновленні гра вибирає випадкову валюту зі списку валют!</p>
+    <h3 id="2-1">Список валют</h3>
+    <p>Список валют складається завдяки текстовому файлу валют. Проте ніяких оновлень не потрібно встановлювати, щоб валюти оновились. Тож як це відбувається?</p>
+    <p>До студії вступає ще одне прекрасне розширення <b>ASD Downloader</b> (ASD-завантажувач) <img src="https://c.tenor.com/NWKk8sFJX2sAAAAC/tenor.gif" width="30px" height="55px" 
+    title="Нове розширення входить в студію!">. <i>ASD</i> перекладається як "App-Specific Directory" - директорія (розташування файлів)
+    специфічне програмі. Тобто, коротше кажучи, це завантажувач до самої програми. Основним привілеєм цього розширення є те, що <u>файли можна завантажувати з Інтернету</u>...</p>
+    <div class="alert alert-success" role="alert">
+     І це ще не все! У оновленні також пристутні багато виправлень помилок, деякі з яких зайняли досить багато часу та сил!
+    </div>
