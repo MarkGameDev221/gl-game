@@ -9,10 +9,11 @@
   <body style="background-image: url('./golologo_appicon.png')">
     <style>
       .updatebanner {
-        transform: skew(-5deg, 0deg);
+        /* transform: skew(-5deg, 0deg); --!> */
         background-color: orange;
         color: white;
         margin-left: 10px;
+        margin-bottom: 10px;
         padding: 10px;
         text-align: center;
         border: 2px black solid;
@@ -34,6 +35,7 @@
       }
       .updates {
         display: flex;
+        flex-wrap: wrap;
       }
       @media only screen and (max-width: 767px) {
         .updates {
