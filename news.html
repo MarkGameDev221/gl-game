@@ -9,10 +9,11 @@
   <body style="background-image: url('./golologo_appicon.png')">
     <style>
       .updatebanner {
-        transform: skew(-5deg, 0deg);
+        /* transform: skew(-5deg, 0deg); --!> */
         background-color: orange;
         color: white;
         margin-left: 10px;
+        margin-bottom: 10px;
         padding: 10px;
         text-align: center;
         border: 2px black solid;
@@ -34,6 +35,7 @@
       }
       .updates {
         display: flex;
+        flex-wrap: wrap;
       }
       @media only screen and (max-width: 767px) {
         .updates {
@@ -48,6 +50,11 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <div class="updates">
+      <div class='updatebanner'>
+        <img src="posters/update_1.2.png" width="200px" height="120px">
+        <h2>Оновлення 1.2</h2>
+        <button class="btn btn-success"><a style="text-decoration: none; color: white;" href="/news.12.html">Читати</a></button>
+      </div>
       <div class='updatebanner'>
         <img src="posters/update_1.1.png" width="200px" height="120px">
         <h2>Оновлення 1.1</h2>
